@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    background-color: #7729ee;
+    bottom: 0;
+}
+
+.card .content {
+    position: relative;
+    display: flex;
+    margin-top: -80px;
+    gap: 20px;
+    align-items: center;
+}
+
+.card .content .image-box {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.card .content .image-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .content .details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #111;
+}
+
+.card .content .details .phone,
+.card .content .details .email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card .content .details h3 {
+    font-weight: 600;
+}
+
+.card .content .details ion-icon {
+    font-weight: 1.4em;
+}
