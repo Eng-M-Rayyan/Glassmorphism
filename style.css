@@ -108,3 +108,8 @@ body {
 .card .content .details ion-icon {
     font-weight: 1.4em;
 }
+
+.card .content .details .email a {
+    text-decoration: none;
+    color: inherit;
+}
